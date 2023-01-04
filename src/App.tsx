@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import initMyFirebase from "./firebase-config"
 import LoginWithGoogle from "./loginWithGoogle";
 import useFirebaseAuth from "./useAuth";
+import { NavBar } from "../components/navBar"
 
 export const App = () => {
 
@@ -18,15 +19,17 @@ export const App = () => {
 
   return (
     <div>
+      <NavBar/>
+      
+      <h1>Teste Firebase</h1>
       <LoginWithGoogle/>
-      <h1>Hello World</h1>
-
       <a href="/home">
         <button>Go to Home Page</button>
       </a>
       <a href="/Profile">
         <button>Go to Profile Page</button>
       </a>
+
     </div>
   )
 }
