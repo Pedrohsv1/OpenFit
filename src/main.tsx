@@ -9,20 +9,23 @@ import ProfilePage from './profile'
 
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
+import "bootstrap/dist/js/bootstrap.js"
+import Layout from './layout'
 
 initMyFirebase();
 
-import("bootstrap/dist/js/bootstrap")
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/Home" element={<Home/>}/>
-        <Route path="/Profile" element={<ProfilePage/>}/>
-        <Route path="/logout" element={<LogoutPage/>}/>
+        
+          <Route path="/" element={<App/>}/>
+          <Route path="/Home" element={<Home/>}/>
+          <Route path="/Profile" element={<ProfilePage/>}/>
+          <Route path="/logout" element={<LogoutPage/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

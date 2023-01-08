@@ -24,7 +24,15 @@ const LoginWithGoogle = () => {
 
   return(
     <>
-      <button type="button" onClick={handleLogin}>Login With Google</button>
+    
+      <button 
+      type="button" 
+      onClick={handleLogin} 
+      className="btn btn-primary"
+      data-bs-dismiss="modal"
+      >
+        <i className="bi bi-google"> </i>Login With Google
+      </button>
     </>
   )
 };

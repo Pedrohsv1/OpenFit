@@ -3,6 +3,7 @@ import initMyFirebase from "./firebase-config"
 import LoginWithGoogle from "./loginWithGoogle";
 import useFirebaseAuth from "./useAuth";
 import { NavBar } from "../components/navBar"
+import Layout from "./layout";
 
 export const App = () => {
 
@@ -19,17 +20,20 @@ export const App = () => {
 
   return (
     <div>
-      <NavBar/>
-      
-      <h1>Teste Firebase</h1>
-      <LoginWithGoogle/>
-      <a href="/home">
-        <button>Go to Home Page</button>
-      </a>
-      <a href="/Profile">
-        <button>Go to Profile Page</button>
-      </a>
+      <Layout/>
+      <div className="container p-5 rounded text-center">
+        <h1>Olá! O que você vai  <span className="text-success">comer </span>hoje?</h1>
+        <h4>Nos estamos Open para seu mundo Fit</h4>
+        <div  className="container mt-5">
+          <div className="row">
+            <div  className="col"><img src="comidafit.jpg" alt="" style={{width:"100%", height: "150%"}} className="rounded-4 "/></div>
+            <div  className="col"><img src="comidafit.jpg" alt="" style={{width:"100%", height: "150%"}} className="rounded-4 "/></div>
+            <div  className="col"><img src="comidafit.jpg" alt="" style={{width:"100%", height: "150%"}} className="rounded-4 " /></div>
+          </div>
+        </div>
 
+        
+      </div>
     </div>
   )
 }

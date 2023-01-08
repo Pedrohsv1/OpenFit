@@ -3,9 +3,10 @@ import { getAuth } from "firebase/auth";
 import { getAnalytics} from "firebase/analytics";
 import { getPerformance} from "firebase/performance";
 
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyCuINAUlP1r2l1CzeS4UdhKqe11UmYZVlU",
   authDomain: "openfit-2ba57.firebaseapp.com",
+  databaseURL: "https://openfit-2ba57-default-rtdb.firebaseio.com",
   projectId: "openfit-2ba57",
   storageBucket: "openfit-2ba57.appspot.com",
   messagingSenderId: "1045140129299",

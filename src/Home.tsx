@@ -1,6 +1,11 @@
+import Layout from "./layout"
 import useFirebaseAuth from "./useAuth"
 
 export const Home = () => {
+
+  const firstTimeLogged = true;
+
+
 
     const {user, loading, logOut} = useFirebaseAuth()  
 
@@ -9,17 +14,14 @@ export const Home = () => {
     }
 
     return (
-      <div>
-        <h1>Im the home page</h1>
-        <p>Hi {user?.displayName}</p>
-        <p>you should see me only if you are logged in</p>
-        <button type="button" onClick={logOut}>LogOut</button>
-        <a href="/">
-        <button>Go to Index Page</button>
-      </a>
-      <a href="/Profile">
-        <button>Go to Profile Page</button>
-      </a>
-      </div>
+      
+      <><Layout/><div className="container p-5 rounded bg-secondary">
+        <h1>Home</h1>
+        <div className="text-light">
+          <p>Hi {user?.displayName}</p>
+          <p>you should see me only if you are logged in</p>
+        </div>
+
+      </div></>
     )
   }
