@@ -1,20 +1,26 @@
-body {
-   /* scroll thumb and track */
-}
-
 .kanban {
   display: flex;
   align-items: center;
+  justify-content: start;
   gap: 2em;
   padding: 0 1em 2em 2em;
-  overflow-x:scroll;
   scroll-behavior: auto;
   scrollbar-width: thin;
+  overflow-x:scroll;
+
+
+  
+}
+
+@media screen and (min-width: 1360px) {
+  .kanban{
+    justify-content: center;
+  }
 }
 
 .kanban::-webkit-scrollbar-track {
   background-color: #fff;
-  margin: 0em 1em;
+  margin: 0em 2em;
 }
 
 .kanbanSection {

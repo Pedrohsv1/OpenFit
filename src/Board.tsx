@@ -58,7 +58,7 @@ export const Board = () => {
                     <div className="kanbanSectionTititle">
                       {section.title}
                     </div>
-                    <p>{section.number}</p>
+                    <p>{section.tasks ? section.tasks.length : 0}</p>
                     </div>
 
                     <div className="kanbanSectionContent">
