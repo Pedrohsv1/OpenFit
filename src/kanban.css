@@ -16,6 +16,9 @@
   .kanban{
     justify-content: center;
   }
+  .kanbanSection {
+    width: 400px;
+  }
 }
 
 .kanban::-webkit-scrollbar-track {
@@ -24,8 +27,8 @@
 }
 
 .kanbanSection {
-  width: 300px;
   min-width: 300px;
+
   gap: 1em;
   padding: 1em;
   color: white;
@@ -58,7 +61,7 @@
 }
 
 * {
-  scrollbar-width: thin;
+  scrollbar-width: 0.6em;
   scrollbar-color: #2A2E38 #191C24;
 }
 
