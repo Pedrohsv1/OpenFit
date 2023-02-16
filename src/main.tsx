@@ -11,22 +11,20 @@ import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "bootstrap/dist/js/bootstrap.js"
 import Layout from './layout'
+import Board from './Board'
 
 initMyFirebase();
 
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    
     <BrowserRouter>
       <Routes>
-        
           <Route path="/" element={<App/>}/>
           <Route path="/Home" element={<Home/>}/>
           <Route path="/Profile" element={<ProfilePage/>}/>
           <Route path="/logout" element={<LogoutPage/>}/>
+          <Route path="/board" element={<Board/>}/>
       </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
+    </BrowserRouter>,
 )

@@ -4,10 +4,11 @@ import Layout from "./layout";
 import useFirebaseAuth from "./useAuth";
 import { getDatabase, onValue, ref, remove, set } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
+import Teste from "./teste";
 
 const ProfilePage = () => {
 
-  const {user, loading, logOut} = useFirebaseAuth()  
+  const {user, loading, logOut} = useFirebaseAuth() 
 
   const [userDetails , setUserDetails] = useState({})
   const bioTrRef = useRef();
@@ -56,20 +57,21 @@ const ProfilePage = () => {
     const dbRef = ref(db, userDbRef)
 
     const newUserDetails = {
-      bio: bioTrRef.current?.value,
+      bio:bioTrRef.current?.value,
       password: passwordTrRef.current?.value,
       address: addressTrRef.current?.value,
     }
 
     set(dbRef, newUserDetails);
-    console.log("Success!!!", newUserDetails)
+    console.log("ProfilePage")
   }
 
   if (loading){
     return <p>Loading please wait.......</p>
   }
   return (
-    <><Layout /><div className="container p-5 rounded-4 bg-secondary">
+    <><Layout />
+    <div className="container p-5 rounded-4 bg-secondary">
       <h1>Profile</h1>
       <div className="row mt-4 bg-dark justify-content-center p-4 rounded">
         <div className="col-md-5 p-2 d-flex justify-content-center ">

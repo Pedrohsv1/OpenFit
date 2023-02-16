@@ -38,6 +38,16 @@ export const NavBar = (props: any) => {
                       </button>
                     </Link>
                   </li>
+                  <li className="nav-item">
+                  <Link to="/board">
+                      <button type="button" className="btn btn-outline-light btn-sm ms-md-2">
+                        <i className="bi bi-person-fill">
+                          {" "}
+                          Board
+                        </i>
+                      </button>
+                    </Link>
+                  </li>
                 </ul>
                 </div>
                   <div className="me-md-5">
@@ -62,6 +72,7 @@ export const NavBar = (props: any) => {
               </button>
 
             </Link>
+
             <div className="me-md-5">
               <SignUpFirebase />
               <SignInFirebase />

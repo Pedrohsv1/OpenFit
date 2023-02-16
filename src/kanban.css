@@ -1,0 +1,71 @@
+body {
+   /* scroll thumb and track */
+}
+
+.kanban {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 0 1em 2em 2em;
+  overflow-x:scroll;
+  scroll-behavior: auto;
+  scrollbar-width: thin;
+}
+
+.kanban::-webkit-scrollbar-track {
+  background-color: #fff;
+  margin: 0em 1em;
+}
+
+.kanbanSection {
+  width: 300px;
+  min-width: 300px;
+  gap: 1em;
+  padding: 1em;
+  color: white;
+  background-color: #191C24;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.kanbanSectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0.5em;
+  padding-left: 1.1em;
+  color: white;
+  height: 65vh;
+  overflow-y:scroll;
+  scroll-behavior: auto;
+  scrollbar-width: thin;          /* "auto" or "thin" */ 
+}
+
+.Card {
+  padding: 1em;
+  background-color: #393E4B;
+  border-radius: 5px;
+  color: white;
+  filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.25));
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2E38 #191C24;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+*::-webkit-scrollbar-track {
+  background: #191C24;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2A2E38;
+  border-radius: 20px;
+}
